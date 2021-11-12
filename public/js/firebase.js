@@ -1,5 +1,6 @@
  // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js";
+import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/9.4.1/firebase-analytics.js";
 import { getAuth, getRedirectResult, createUserWithEmailAndPassword, setPersistence, signInWithEmailAndPassword, browserSessionPersistence, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
 import { getDatabase, ref, set, child, update, remove, onValue, get} from "https://www.gstatic.com/firebasejs/9.1.3/firebase-database.js";
 
@@ -35,6 +36,7 @@ const firebaseConfig = {
     // Get a reference to the database service
     var database = firebase.database();
     var auth = firebase.auth();
+    var analytics = firebase.analytics();
 
     try {
         let app = firebase.app();
@@ -316,3 +318,4 @@ try{
 }catch (e) {
     console.log(e);
 }
+
