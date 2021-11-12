@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HVA Bathroom Tracker</title>
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/9.4.0/firebase-app-compat.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/9.4.0/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-functions-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-messaging-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-storage-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-analytics-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-remote-config-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-performance-compat.js"></script>
+        
+        <script defer type="module" src="js/firebase.js"></script>
+    
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+        
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+    </head>
+
+    <body class="login"  style="background-image: url('images/cross.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+        <button id="homePage" onclick="location.replace('index.html')">Home</button>
+        
+        <div id="message">
+            <div class="header">
+                <h1>Update Bathroom Status <br>(admins only fools)</h1>
+            </div>
+            <table>
+                <th>Men's</th>
+                <tr>
+                    <td>Atrium</td>
+                    <td><button onclick="changeStatus('m-atrium', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('m-atrium', 'closed')"> Closed</button></td>
+                    <td id="m-atrium-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Gym </td>
+                    <td><button onclick="changeStatus('m-gym', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('m-gym', 'closed')"> Closed</button></td>
+                    <td id="m-gym-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Upstairs D</td>
+                    <td><button onclick="changeStatus('m-upstairs-D', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('m-upstairs-D', 'closed')"> Closed</button></td>
+                    <td id="m-upstairs-D-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Downstairs D</td>
+                    <td><button onclick="changeStatus('m-downstairs-D', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('m-downstairs-D', 'closed')"> Closed</button></td>
+                    <td id="m-downstairs-D-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Upstairs F</td>
+                    <td><button onclick="changeStatus('m-upstairs-F', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('m-upstairs-F', 'closed')"> Closed</button></td>
+                    <td id="m-upstairs-F-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Downstairs F</td>
+                    <td><button onclick="changeStatus('m-downstairs-F', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('m-downstairs-F', 'closed')"> Closed</button></td>
+                    <td id="m-downstairs-F-icon">🔴</td>
+                </tr>
+            </table>
+            <table><br><br>
+                <th>Women's</th>
+                <tr>
+                    <td>Atrium</td>
+                    <td><button onclick="changeStatus('f-atrium', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('f-atrium', 'closed')"> Closed</button></td>
+                    <td id="f-atrium-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Gym </td>
+                    <td><button onclick="changeStatus('f-gym', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('f-gym', 'closed')"> Closed</button></td>
+                    <td id="f-gym-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Upstairs D</td>
+                    <td><button onclick="changeStatus('f-upstairs-D', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('f-upstairs-D', 'closed')"> Closed</button></td>
+                    <td id="f-upstairs-D-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Downstairs D</td>
+                    <td><button onclick="changeStatus('f-downstairs-D', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('f-downstairs-D', 'closed')"> Closed</button></td>
+                    <td id="f-downstairs-D-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Upstairs F</td>
+                    <td><button onclick="changeStatus('f-upstairs-F', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('f-upstairs-F', 'closed')"> Closed</button></td>
+                    <td id="f-upstairs-F-icon">🔴</td>
+                </tr>
+                <tr>
+                    <td>Downstairs F</td>
+                    <td><button onclick="changeStatus('f-downstairs-F', 'open')"> Open</button></td>
+                    <td><button onclick="changeStatus('f-downstairs-F', 'closed')"> Closed</button></td>
+                    <td id="f-downstairs-F-icon">🔴</td>
+                </tr>
+            </table>
+
+     
+            <div class="credits">
+                <p>A Bathroom Boys Production</p>
+            </div>
+        </div>
+
+    </body>
+
+</html>

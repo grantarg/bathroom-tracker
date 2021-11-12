@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HVA Bathroom Tracker Login</title>
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/9.4.0/firebase-app-compat.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/9.4.0/firebase-auth-compat.js"></script>
+    <script defer src="/__/firebase/9.4.0/firebase-database-compat.js"></script>
+    <script defer src="/__/firebase/9.4.0/firebase-firestore-compat.js"></script>
+    <script defer src="/__/firebase/9.4.0/firebase-functions-compat.js"></script>
+    <script defer src="/__/firebase/9.4.0/firebase-messaging-compat.js"></script>
+    <script defer src="/__/firebase/9.4.0/firebase-storage-compat.js"></script>
+    <script defer src="/__/firebase/9.4.0/firebase-analytics-compat.js"></script>
+    <script defer src="/__/firebase/9.4.0/firebase-remote-config-compat.js"></script>
+    <script defer src="/__/firebase/9.4.0/firebase-performance-compat.js"></script>
+    
+    <script type="module" src="js/firebase.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
+    
+    <link rel="stylesheet" href="css/index.css" type="text/css">
+</head>
+<body class="login">
+    <div id=nav>
+        <button onclick="location.replace('index.html')">Home</button>
+        <p>Login or Create Account</p>
+    </div>
+
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
+
+    <button onclick="location.replace('update.html')">Skip Login</button>
+</body>
+</html>
