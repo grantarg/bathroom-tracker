@@ -54,18 +54,7 @@ body {
     font-size: 14px; 
 }
 
-#message a { 
-    display: block; 
-    text-align: center; 
-    background: #039be5; 
-    text-transform: uppercase; 
-    text-decoration: none; 
-    color: white; 
-    padding: 16px; 
-    border-radius: 4px; 
-}
-
-#message, #message a { 
+#message { 
     box-shadow: 8px 10px 15px rgb(0, 0, 0); 
 }
 
@@ -144,8 +133,7 @@ body {
     text-align: left;
 }
 
-.updateDiv {
-    margin-top: 20px;
+.indexButtons {
     grid-column: 1 / 5;
     grid-row: 2 / 3;
 }
@@ -186,6 +174,9 @@ table {
 
 /*update and login page */
 
+.login h1 {
+    text-align: center;
+}
 .login #nav p{
     text-align:center;
     width:auto;
@@ -207,15 +198,24 @@ table {
   
 .login tr:nth-child(even) {background-color: #f2f2f2;}
 
-.login #homePage button{
-    float:right;
-    background-color: #006eff; /* Green */
-    color: white;
-    padding: 20px;
+.login{
     text-align: center;
-    font-size: 16px;
-    margin: auto;
-    border-radius: 15px;
+}
+
+.loginButtons button, .updateButtons button, .indexButtons button{
+    font-size: 15px;
+    padding:5px;
+    margin-top:15px;
+    margin-right:10px;
+    margin-left:10px;
+    border-radius: 9px;
+    border:none;
+}
+
+.indexButtons button{
+    margin-top:22px;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 /*

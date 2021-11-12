@@ -26,15 +26,20 @@
     
     <link rel="stylesheet" href="css/index.css" type="text/css">
 </head>
-<body class="login">
-    <div id=nav>
-        <button onclick="location.replace('index.html')">Home</button>
-        <p>Login or Create Account</p>
+<body class="login" style="background-image: url('images/cross.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+    <div id="message">
+        <div class="header">
+            <h1>Login or Create Account</h1>
+        </div>
+        <div id="firebaseui-auth-container"></div>
+        <div id="loader">Loading...</div>
+        <div class="loginButtons">
+            <button onclick="location.replace('index.html')">Home</button>
+            <button onclick="location.replace('update.html')">Skip Login</button>
+        </div>
+        <div class="credits">
+            <p>A Bathroom Boys Production</p>
+        </div>
     </div>
-
-    <div id="firebaseui-auth-container"></div>
-    <div id="loader">Loading...</div>
-
-    <button onclick="location.replace('update.html')">Skip Login</button>
 </body>
 </html>
