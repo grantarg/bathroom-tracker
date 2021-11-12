@@ -1,2 +1,8 @@
 1) -  Add "Voting" Functionality to Status page
 2) -  "Machine Learning" 
+3) -  Display voting as a number on index page
+4) -  Unscuff the login page make it look nice
+5) -  Make update status page look a little different if you arent logged in as an admin (so voting is more clear maybe?)
+6) -  ￼Make instagram page
+7) -  Make a twitter page
+8) -  Maybe have something autopost the dailt status
