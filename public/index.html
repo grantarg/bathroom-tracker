@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -89,15 +89,18 @@
                     <div class="status-emoji-6" id="f-downstairs-F-icon"><p>🟢</p></div>
                 </div>
                 
-                <div class="credits">
-                    <p>A Bathroom Boys Production</p>
-                </div>
                 
                 <div class="indexButtons">
                     <button onclick="if(firebase.auth().currentUser != null){location.replace('update.html')}else{location.replace('login.html')}">Update Status</button>
                     <button onclick="location.replace('login.html')">Login</button>
                     <button onclick="location.replace('index.html')">Refresh</button>
                 </div>
+
+                <div class="credits">
+                    <p style="font-size: 13px;">See some info that is wrong? Click <a href="request.html">here</a> to submit a status change request.(WIP)</p>
+                    <p>A Bathroom Boys Production</p>
+                </div>
+
             </div>
         </div>
     </body>

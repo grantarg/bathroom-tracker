@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Request Status Change</title>
+        <!-- update the version number as needed -->
+        <script defer src="/__/firebase/9.4.0/firebase-app-compat.js"></script>
+        <!-- include only the Firebase features as you need -->
+        <script defer src="/__/firebase/9.4.0/firebase-auth-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-database-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-firestore-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-functions-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-messaging-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-storage-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-analytics-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-remote-config-compat.js"></script>
+        <script defer src="/__/firebase/9.4.0/firebase-performance-compat.js"></script>
+
+        <script type="module" src="js/firebase.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/request.js"></script>
+
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
+
+        <link rel="stylesheet" href="css/index.css" type="text/css">
+
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8953806968318607"
+        crossorigin="anonymous"></script>
+</head>
+<body style="background-image: url('images/cross.jpg'); background-repeat: no-repeat; background-attachment: fixed; background-size: 100% 100%;">
+    <div id="message">
+
+        <div class="header">
+            <h1>Request Status Change</h1>
+        </div>
+
+        <div class="questions">
+
+            <input type="radio" id="boys" name="gender" value="0">
+            <label for="boys">Boys</label>
+            <input type="radio" id="girls" name="gender" value="1">
+            <label for="girls">Girls</label><br><br>
+
+            <label for="location">Which bathroom has an issue?</label><br>
+            <select id="location"  onchange="checkLocation()" style="color:gray;">
+                <option value="null" style="color:gray;">Select</option>
+                <option style="color:black;">Atrium</option>
+                <option style="color:black;">Gym</option>
+                <option style="color:black;">Upstairs D</option>
+                <option style="color:black;">Downstairs D</option>
+                <option style="color:black;">Upstairs F</option>
+                <option style="color:black;">Downstairs F</option>
+            </select><br><br>
+                
+            <label for="issue">What is the issue?</label><br>
+            <select id="issue" onchange="checkIssue()" style="color:gray;">
+                <option value="null" style="color:gray;">Select</option>
+                <option value="1" style="color:black;">Open/Closed Status</option>
+                <option value="2" style="color:black;">Soap level</option>
+                <option value="3" style="color:black;">Paper towel level</option>
+            </select><br><br>
+
+            <div id="issue1" style="display: none;">
+                <label>What should it be?</label><br>
+                <input type="radio" id="open" name="issue" value="0">
+                <label for="open">Open</label>
+                <input type="radio" id="closed" name="issue" value="1">
+                <label for="closed">Closed</label><br><br>
+            </div>
+
+            <div id="issue2" style="display: none;">
+                <label>What should it be?</label><br>
+                <input type="radio" id="Empty" name="issue" value="0">
+                <label for="Empty">Empty</label>
+                <input type="radio" id="mid" name="issue" value="1">
+                <label for="mid">Medium Full</label>
+                <input type="radio" id="full" name="issue" value="2">
+                <label for="full">Full</label><br><br>
+            </div>
+
+            <div id="issue3" style="display: none;">
+                <label>What should it be?</label><br>
+                <input type="radio" id="None" name="issue" value="1">
+                <label for="None">None</label>
+                <input type="radio" id="stocked" name="issue" value="2">
+                <label for="stocked">Stocked</label><br><br>
+            </div>
+
+            <label for="notes">Notes:</label>
+            <input type="text" id="name" name="notes">
+
+            <button>Submit</button>
+
+        </div>
+            
+            <div class="indexButtons">
+                <button onclick="location.replace('login.html')">Login</button>
+                <button onclick="location.replace('index.html')">Home</button>
+            </div>
+
+            <div class="credits">
+                <p>A Bathroom Boys Production</p>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

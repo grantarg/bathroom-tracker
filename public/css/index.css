@@ -157,10 +157,32 @@ body {
     border:none;
 }
 
+.indexButtons{
+    text-align: center;
+}
+
 .indexButtons button{
     margin-top:22px;
     margin-left: 0;
     margin-right: 0;
+}
+
+.questions{
+    text-align: center;
+}
+
+.questions select{
+    font-size: 18px;
+}
+
+.questions button{
+    padding: 6px;
+    text-align: center;
+    display: block;
+    margin:20px auto 2px auto;
+    font-size: 22px;
+    border-radius: 5px;
+    border: none;
 }
 
 /* grid stuff below */
