@@ -1,6 +1,6 @@
 {
   "rules": {
     ".read": true,
-    ".write": "'oeVegaaLLAOFIzk3XyeE9fJhSpA2' === auth.uid || 'Z5WbYdDPpifMDoSKT09NnCWtg2z2' === auth.uid || 'k8ozkjctTCgC2SIWbc4vS7rB5x93' === auth.uid"
+    ".write": "'oeVegaaLLAOFIzk3XyeE9fJhSpA2' === auth.uid || 'Z5WbYdDPpifMDoSKT09NnCWtg2z2' === auth.uid || 'k8ozkjctTCgC2SIWbc4vS7rB5x93' === auth.uid || 'MorrwcnPfjR1nM2sgHi0qwbGALM2' === auth.uid || 'rTXcxepcHMWUw9guf6cwF6QnFbG2' === auth.uid"
   }
 }
